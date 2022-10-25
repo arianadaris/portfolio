@@ -1,0 +1,14 @@
+@font-face {
+    font-family: FoundersRegular;
+    src: url('../assets/fonts/FoundersGrotesk/foundersgrotesk-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: Ogg;
+    src: url('../assets/fonts/Ogg/ogg-roman-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: FoundersLight;
+    src: url('../assets/fonts/FoundersGrotesk/foundersgrotesk-light-webfont.woff') format('woff')
+}

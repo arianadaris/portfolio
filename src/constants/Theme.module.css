@@ -1,0 +1,18 @@
+@import './Fonts.css';
+
+
+.foundersRegular {
+    font-family: FoundersRegular;
+}
+
+.foundersLight {
+    font-family: FoundersLight;
+}
+
+.ogg {
+    font-family: Ogg;
+}
+
+.caps {
+    text-transform: uppercase;
+}

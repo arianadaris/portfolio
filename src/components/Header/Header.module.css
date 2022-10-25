@@ -1,0 +1,28 @@
+.container {
+    padding: 1.5rem 4rem 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid black;
+}
+
+.logo {
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem {
+    font-size: 1.25rem;
+    margin-right: 4rem;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.navItem:hover {
+    color: black;
+}
