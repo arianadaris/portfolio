@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../constants/Theme.module.css';
 import aboutStyles from './About.module.css';
+import { motion } from 'framer-motion';
 
 import Heading from '../../components/Heading/Heading';
 import Socials from '../../components/Socials/Socials';
@@ -16,7 +17,12 @@ export default function About() {
             {/* About Me Label */}
             <div className={styles.flexRow}>
                 <Heading firstWord="About" secondWord="Me" />
-                <div className={styles.line} />
+                <motion.div 
+                    className={styles.line} 
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                />
             </div>
 
             {/* Hi I'm Ariana Daris - Paragraphs and Image */}
