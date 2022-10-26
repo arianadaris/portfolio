@@ -1,0 +1,40 @@
+/* Animations */
+@keyframes slide-in {
+    0% {
+      transform: translateX(-50%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+  }
+
+.btnContainer {
+    border-radius: 100px;
+    border: 0.5px solid black;
+    width: fit-content;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+}
+
+.arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 2rem;
+    animation: slide-in 2.5s ease-in-out infinite;
+}
+
+.hover {
+  transition: all .25s ease-in-out;
+}
+
+.hover:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+.hover:hover > .arrow {
+  animation-play-state: paused;
+}

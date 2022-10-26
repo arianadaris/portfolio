@@ -1,0 +1,37 @@
+/* Animations */
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(8deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(8deg); }
+  80% { transform: rotate(-8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.btnContainer {
+    border-radius: 100px;
+    width: fit-content;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    background-color: #3c3c3c;
+}
+
+.arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 2rem;
+    animation: tilt-shaking 2s 0.5s ease-in-out infinite;
+}
+
+.hover {
+  transition: all .25s ease-in-out;
+}
+
+.hover:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+.hover:hover > .arrow {
+  animation-play-state: paused;
+}

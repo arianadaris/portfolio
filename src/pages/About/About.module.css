@@ -1,0 +1,79 @@
+/* Animations */
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(8deg); }
+    40% { transform: rotate(-8deg); }
+    60% { transform: rotate(8deg); }
+    80% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.pHalf {
+    width: 60%;
+}
+
+.pSecondHalf {
+    width: 40%;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 1000px 1000px 0 0;
+}
+
+.frame {
+    height: 18vw;
+    margin: 1rem auto 0 auto;
+}
+
+.emoji {
+    display: inline-block;
+    animation: tilt-shaking 4s linear infinite;
+}
+
+.tags {
+    margin-top: 3rem;
+}
+
+.tagContainer {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.tagTitle {
+    line-height: 1rem;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.tagText {
+    margin-bottom: 0rem;
+}
+
+.coloredContainer {
+    width: 110%;
+    padding: 1rem 5% 0.5rem 5%;
+    margin: 4rem -5% 4rem 0;
+}
+
+.expHalf {
+    width: 40%;
+}
+
+.expP {
+    padding-bottom: 1rem;
+}
+
+.expSecondHalf {
+    width: 60%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.expSection {
+    margin-bottom: 1rem;
+}

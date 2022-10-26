@@ -10,5 +10,10 @@
 
 @font-face {
     font-family: FoundersLight;
-    src: url('../assets/fonts/FoundersGrotesk/foundersgrotesk-light-webfont.woff') format('woff')
+    src: url('../assets/fonts/FoundersGrotesk/foundersgrotesk-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: FoundersLightItalic;
+    src: url('../assets/fonts/FoundersGrotesk/foundersgrotesk-lightitalic-webfont.woff');
 }

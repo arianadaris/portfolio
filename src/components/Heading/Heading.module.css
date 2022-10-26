@@ -1,0 +1,18 @@
+.container {
+    border: 0.5px solid black;
+    width: fit-content;
+    border-radius: 100px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: -1rem;
+    margin-right: 1rem;
+}
+
+.dawn {
+    height: 2.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

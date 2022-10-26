@@ -1,0 +1,16 @@
+.title {
+    margin-top: -1rem;
+}
+
+.icon {
+    height: 4vw;
+    margin: 0 1rem;
+    border-radius: 100%;
+    border: 1px solid black;
+    padding: 0.25rem;
+}
+
+.half {
+    width: 50%;
+    margin-top: 3rem;
+}

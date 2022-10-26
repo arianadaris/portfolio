@@ -1,18 +1,83 @@
 @import './Fonts.css';
 
-
+/* Fonts */
 .foundersRegular {
     font-family: FoundersRegular;
+    letter-spacing: 0.1rem;
 }
 
 .foundersLight {
     font-family: FoundersLight;
 }
 
+.foundersLightItalic {
+    font-family: FoundersLightItalic;
+}
+
 .ogg {
     font-family: Ogg;
 }
 
+/* Font Sizes */
+.size14 {
+    font-size: 0.729vw;
+}
+
+.size24 {
+    font-size: 1.25vw;
+}
+
+.size16 {
+    font-size: 0.833vw;
+}
+
+.size48 {
+    font-size: 3vw;
+}
+
+.size18 {
+    font-size: 0.9375vw;
+}
+
+/* Text decoration */
 .caps {
     text-transform: uppercase;
+}
+
+/* Text colors */
+.white {
+    color: white;
+}
+
+/* Containers */
+
+.container {
+    width: 55%;
+    margin: 4rem auto;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+/* Display */
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    align-items: center;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+/* Components */
+
+.line {
+    border-bottom: 0.5px solid black;
+    width: 100%;
+    background-color: lightblue;
+    align-self: center;
 }

@@ -1,0 +1,62 @@
+.cardContainer {
+    width: 95%;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+    filter: drop-shadow(0px 162px 65px rgba(0, 0, 0, 0.01)) drop-shadow(0px 91px 55px rgba(0, 0, 0, 0.03)) drop-shadow(0px 40px 40px rgba(0, 0, 0, 0.04)) drop-shadow(0px 10px 22px rgba(0, 0, 0, 0.05)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.05));
+}
+
+.hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: all ease-in-out 0.5s;
+}
+
+.hover:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.num {
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+}   
+
+.image {
+    width: 22.5vw;
+    height: fit-content;
+    align-self: center;
+    margin-left: -1rem;
+    margin-top: 4rem;
+}
+
+.container {
+    padding: 0 1.5rem;
+    margin-top: 2rem;
+}
+
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+    margin-left: 0.75rem;
+}
+
+.tagsContainer {
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+}
+
+.tag {
+    width: fit-content;
+    border: 0.5px solid white;
+    border-radius: 100px;
+    margin-right: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.test {
+    background: blue;
+}

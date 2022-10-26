@@ -1,0 +1,19 @@
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: all ease-in-out 0.25s;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgba(0,0,0,0.5);
+}
+
+.socialContainer {
+    padding: 0 1rem;
+}
+
+.spacing {
+    margin: 0 1rem;
+}
