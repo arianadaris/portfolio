@@ -9,11 +9,11 @@
   }
 
 .pHalf {
-    width: 60%;
+    width: 62.5%;
 }
 
 .pSecondHalf {
-    width: 40%;
+    width: 37.5%;
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
@@ -53,9 +53,9 @@
 }
 
 .coloredContainer {
-    width: 110%;
+    width: 105%;
     padding: 1rem 5% 0.5rem 5%;
-    margin: 4rem -5% 4rem 0;
+    margin: 4rem -4rem;
 }
 
 .expHalf {
@@ -64,14 +64,15 @@
 
 .expP {
     padding-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .expSecondHalf {
     width: 60%;
-    margin-left: 2rem;
+    margin-left: 4rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 1rem 5% 1rem 0;
 }
 
 .expSection {

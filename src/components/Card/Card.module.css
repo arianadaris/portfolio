@@ -1,7 +1,7 @@
 .cardContainer {
     width: 95%;
-    padding-bottom: 2rem;
-    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+    margin-bottom: 6rem;
     filter: drop-shadow(0px 162px 65px rgba(0, 0, 0, 0.01)) drop-shadow(0px 91px 55px rgba(0, 0, 0, 0.03)) drop-shadow(0px 40px 40px rgba(0, 0, 0, 0.04)) drop-shadow(0px 10px 22px rgba(0, 0, 0, 0.05)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.05));
 }
 
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.4s;
 }
 
 .hover:hover {
@@ -20,7 +20,7 @@
 
 .num {
     position: absolute;
-    top: 0rem;
+    top: -1rem;
     left: 1rem;
 }   
 
@@ -32,21 +32,25 @@
     margin-top: 4rem;
 }
 
+.title {
+    margin-bottom: 0.5rem;
+}
+
 .container {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     margin-top: 2rem;
 }
 
 .icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     color: white;
     margin-left: 0.75rem;
 }
 
 .tagsContainer {
     flex-wrap: wrap;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 .tag {
@@ -54,7 +58,8 @@
     border: 0.5px solid white;
     border-radius: 100px;
     margin-right: 0.25rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-bottom: 0;
 }
 
 .test {

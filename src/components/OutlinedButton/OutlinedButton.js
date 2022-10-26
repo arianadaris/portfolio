@@ -9,7 +9,7 @@ export default function OutlinedButton(props) {
     return (
         <div className={`${btnStyles.btnContainer}`}>
             <a href={link}><div className={`${styles.flexRow} ${styles.center} ${btnStyles.hover}`}>
-                <h1 className={`${styles.foundersLight} ${styles.size24}`}>{ title }</h1>
+                <p className={`${styles.foundersLight} ${styles.size24}`}>{ title }</p>
                 <Icon className={`${btnStyles.arrow}`}icon="bytesize:arrow-right" />
             </div></a>
         </div>

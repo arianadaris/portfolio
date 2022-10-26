@@ -1,5 +1,6 @@
 .title {
     margin-top: -1rem;
+    margin-bottom: -2rem;
 }
 
 .icon {
@@ -13,4 +14,13 @@
 .half {
     width: 50%;
     margin-top: 3rem;
+}
+
+.contactTitle {
+    margin-top: 2.5rem;
+}
+
+.contactText {
+    margin-top: -2rem;
+    margin-bottom: 4rem;
 }

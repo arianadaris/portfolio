@@ -22,7 +22,7 @@ export default function About() {
             {/* Hi I'm Ariana Daris - Paragraphs and Image */}
             <div className={`${styles.flexRow}`}>
                 <div className={`${aboutStyles.pHalf}`}>
-                    <h1 className={`${styles.ogg} ${styles.size48}`}>Hi, I'm Ariana Daris! <div className={aboutStyles.emoji}><span role="img" aria-label="Wave">{String.fromCodePoint(symbol)}</span></div></h1>
+                    <p className={`${styles.ogg} ${styles.size48}`}>Hi, I'm Ariana Daris! <div className={aboutStyles.emoji}><span role="img" aria-label="Wave">{String.fromCodePoint(symbol)}</span></div></p>
                     <p className={`${styles.foundersLight} ${styles.size24}`}>I’m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor’s degree, and anticipate earning a Master’s degree in Computer Science the following December.</p>
                     <p className={`${styles.foundersLight} ${styles.size24}`}>Outside of school, I enjoy learning about front-end development and UX/UI design. I’m a people person, and I love that I can use code to get to know people and create something beautiful with them! With front-end development, it’s a gratifying feeling seeing how a few lines of code can make the biggest difference for someone else.</p>
                 </div>
@@ -36,57 +36,57 @@ export default function About() {
             <div className={`${styles.flexRow} ${styles.spaceBetween} ${aboutStyles.tags}`}>
                 <div className={`${aboutStyles.tagContainer}`}>
                     <h1 className={`${aboutStyles.tagTitle} ${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Education</h1>
-                    <h1 className={`${aboutStyles.tagText} ${styles.foundersLight} ${styles.size24}`}>Computer Science, B.S. <br/> <span className={`${styles.foundersLightItalic} ${styles.caps} ${styles.size18}`}>Arizona State University</span></h1>
+                    <p className={`${aboutStyles.tagText} ${styles.foundersLight} ${styles.size24}`}>Computer Science, B.S. <br/> <span className={`${styles.foundersLightItalic} ${styles.caps} ${styles.size18}`}>Arizona State University</span></p>
                 </div>
                 <hr />
                 <div className={`${aboutStyles.tagContainer}`}>
                     <h1 className={`${aboutStyles.tagTitle} ${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Specialized In</h1>
-                    <h1 className={`${styles.foundersLight} ${styles.size24}`}>Software Development<br/>Fullstack Development</h1>
+                    <p className={`${styles.foundersLight} ${styles.size24}`}>Software Development<br/>Fullstack Development</p>
                 </div>
                 <hr />
                 <div className={`${aboutStyles.tagContainer}`}>
-                    <h1 className={`${aboutStyles.tagTitle} ${aboutStyles.tagtagTitleText} ${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Familiar With</h1>
-                    <h1 className={`${styles.foundersLight} ${styles.size24}`}>Agile Scrum, APIs, GitHub, MongoDB and MySQL</h1>
+                    <h1 className={`${aboutStyles.tagTitle} ${aboutStyles.tagTitleText} ${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Familiar With</h1>
+                    <p className={`${styles.foundersLight} ${styles.size24}`}>Agile Scrum, APIs, GitHub, MongoDB and MySQL</p>
                 </div>
             </div>
             
             {/* Expertise Section */}
-            <div className={`${aboutStyles.coloredContainer} ${styles.flexRow}`} style={{backgroundColor: '#EAF1F6'}}>
+            <div className={`${aboutStyles.coloredContainer} ${styles.flexRow}`} style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}>
                 <div className={`${aboutStyles.expHalf}`}>
-                    <h1 className={`${styles.ogg} ${styles.size32}`}>My Expertise</h1>
+                    <p className={`${styles.ogg} ${styles.size32}`}>My Expertise</p>
                     <p className={`${aboutStyles.expP} ${styles.foundersLight} ${styles.size24}`}>During highschool, I had the opportunity to take a web development class which introduced me to HTML and CSS. Before studying Computer Science in college, I taught myself Java and Python using Youtube videos and respective documentation.</p>
                     <OutlinedButton title="View More Work" link="/work" />
                 </div>
                 <div className={`${aboutStyles.expSecondHalf}`}>
                     <div className={styles.line} />
                     <div className={`${aboutStyles.expSection}`}>
-                        <h1 className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Programming Languages</h1>
+                        <p className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Programming Languages</p>
                         <div className={`${styles.flexRow} ${styles.spaceBetween} ${styles.center}`}>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Javascript ES6</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>HTML/CSS</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Java</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Python</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>C++</h1>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Javascript ES6</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>HTML/CSS</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Java</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Python</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>C++</p>
                         </div>
                     </div>
                     <div className={styles.line} />
                     <div className={`${aboutStyles.expSection}`}>
-                        <h1 className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Frameworks & Libraries</h1>
+                        <p className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Frameworks & Libraries</p>
                         <div className={`${styles.flexRow} ${styles.spaceBetween} ${styles.center}`}>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>React</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>React Native</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>NodeJS</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>FramerMotion</h1>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>React</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>React Native</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>NodeJS</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>FramerMotion</p>
                         </div>
                     </div>
                     <div className={styles.line} />
                     <div className={`${aboutStyles.expSection}`}>
-                        <h1 className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Development & Design Tools</h1>
+                        <p className={`${styles.caps} ${styles.foundersLight} ${styles.size24}`}>Development & Design Tools</p>
                         <div className={`${styles.flexRow} ${styles.spaceBetween} ${styles.center}`}>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Figma</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Visual Studio Code</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Adobe XD</h1>
-                            <h1 className={`${styles.foundersLight} ${styles.size18}`}>Adobe Illustrator</h1>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Figma</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Visual Studio Code</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Adobe XD</p>
+                            <p className={`${styles.foundersLight} ${styles.size18}`}>Adobe Illustrator</p>
                         </div>
                     </div>
                     <div className={styles.line} />
@@ -103,8 +103,8 @@ export default function About() {
             </div>
             
             {/* Experience Section */}
-            <div className={`${aboutStyles.coloredContainer}`} style={{backgroundColor: '#F3F6F7'}}>
-                <h1 className={`${styles.ogg} ${styles.size32}`}>Let's Get In Touch!</h1>
+            <div className={`${aboutStyles.coloredContainer}`} style={{backgroundColor: 'rgba(255, 255, 255, 0.75)'}}>
+                <p className={`${styles.ogg} ${styles.size32}`}>Let's Get In Touch!</p>
                 <p className={`${aboutStyles.expP} ${styles.foundersLight} ${styles.size24}`}>I am looking forward to taking on freelance opportunities, and would love to hear about your next excting project! Feel free to send me a message and let’s chat.</p>
                 <EmailButton />
             </div>

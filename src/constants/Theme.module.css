@@ -27,12 +27,16 @@
     font-size: 1.25vw;
 }
 
+.size32 {
+    font-size: 1.667vw;
+}
+
 .size16 {
     font-size: 0.833vw;
 }
 
 .size48 {
-    font-size: 3vw;
+    font-size: 3.125vw;
 }
 
 .size18 {
@@ -53,7 +57,7 @@
 
 .container {
     width: 55%;
-    margin: 4rem auto;
+    margin: 12rem auto 4rem auto;
     flex-direction: column;
     padding: 0 1rem;
 }

@@ -5,12 +5,14 @@ html, body
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: "Be Vietnam Pro", Arial;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+html {
+  background: linear-gradient(0deg, rgba(238,243,244,0.25), rgba(238,243,244,0.25)), url('./assets/images/backgrounds/gradient.svg');
 }
 
 a
