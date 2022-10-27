@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Image from 'next/image';
 
 import fs from 'fs';
@@ -8,39 +8,67 @@ import matter from 'gray-matter';
 import StarredPhrase from '../components/StarredPhrase';
 import OutlinedButton from '../components/OutlinedButton';
 import Card from '../components/Card';
+import EmailButton from '../components/EmailButton';
 
 const Home = ({ posts }) => {
-  // .filter((element,index) => { return index % 2 === 1})
+  const symbol = "0x1F44B"; // waving hand emoji
+
+  // Format project cards
+  const cards = posts.map( (data, index) => {
+    var post = data.frontMatter;
+    return <Card 
+      key={ index } 
+      num={ post.date }
+      color={ post.color }
+      projectTitle={ post.title }
+      cover={ post.cover }
+      github={ post.github }
+      tags={ post.tags }
+    />;
+  })
+
+  const leftPosts = cards.filter((element, index) => { return index % 2 === 1 });
+  const rightPosts = cards.filter((element, index) => { return index % 2 === 0 });
 
   return (
-    <div>
-      <span className="flex items-center">
-        <StarredPhrase firstWord="Impact" secondWord="Driven" />
-        <span className="w-3/4 border-b-1" />
-      </span>
+    <>
+      {/* Impact Driven Phrase */}
+      <StarredPhrase firstWord="Impact" secondWord="Driven" />
 
-      <div className="flex items-center py-3">
-        <h1>Fullstack Developer</h1>
+      {/* Introduction */}
+      <div className="flex items-center origin-left animate-fir opacity-0 animation-delay-400">
+        <h1 >Fullstack Developer</h1>
         <span className="p-1 mx-4 border-0.5 rounded-100 bg-red">
           <Image width={85} layout="responsive" src={require('../public/images/personal/PersonalIcon.png')} alt="Ariana Daris" />
         </span>
         <h1>UX/UI Designer</h1>
       </div>
-      <p className="py-4">
+      <p className="pt-4 pb-12 animate-fir opacity-0 animation-delay-400">
         I am a self-taught developer and designer based in the United States. I create beautiful and engaging experiences for all users with empathy and inclusion in mind.
       </p>
-      <OutlinedButton title="About Me" link="/about" />
-      {posts.map((post, index) => (
-      <Card 
-        key={ index } 
-        num={ post.frontMatter.date }
-        color={ post.frontMatter.color }
-        projectTitle={ post.frontMatter.title }
-        cover={ post.frontMatter.cover }
-        tags={ post.frontMatter.tags }
-      />
-      ))}
-    </div>
+
+      {/* Project Cards */}
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <div className="mb-16">
+            <OutlinedButton title="About Me" link="/about" />
+          </div>
+          { leftPosts }
+        </div>
+        <div>
+          { rightPosts }
+          <div className="float-right">
+            <OutlinedButton title="View More Work" link="/work" />
+          </div>
+        </div>
+      </div> 
+
+      {/* Contact Section */}
+      <StarredPhrase firstWord="Contact" secondWord="Me" />
+      <h1 className="py-6">Let's Get In Touch!</h1>
+      <p>Whether you’re just saying <span role="img" aria-label="Wave">{String.fromCodePoint(symbol)}</span>, or you’re looking to start a new project, feel free to send me a message! Currently, I am open to remote freelancing work.</p>
+      <EmailButton />
+    </>
   )
 }
 
@@ -58,8 +86,7 @@ export const getStaticProps = async () => {
     }
   })
 
-  var posts = data.sort((a, b) => (a.date > b.date) ? 1 : -1);
-
+  let posts = data.sort((a, b) => { return a.frontMatter.date - b.frontMatter.date});
 
   return {
     props: {

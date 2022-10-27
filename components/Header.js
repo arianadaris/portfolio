@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 
+import useDarkMode from '../hooks/useDarkMode';
+
 const Header = () => {
+  const [ colorTheme, setTheme ] = useDarkMode();
+  
   return (
-    <div className="flex justify-between items-center px-14 pt-8 pb-6 font-founders uppercase border border-b-0.5">
-      <Link className="tracking-widest text-4xl" href="/">Ariana Daris</Link>
-      <nav className="text-gray text-xl space-x-10 tracking-wider flex">
-        <Link className="hover:text-black" href="/work">Work</Link>
-        <Link className="hover:text-black" href="/about">About</Link>
-        <Link className="hover:text-black" href="/contact">Contact</Link>
-        <Icon className="hover:text-black" icon="bi:moon" />
-      </nav>
-    </div>
+    <>
+      <div className="flex justify-between items-center px-14 pt-8 pb-6 font-foundersLight uppercase border">
+        <Link className="tracking-widest text-32 animate-fir" href="/">Ariana Daris</Link>
+        <nav className="text-neutral-600 dark:text-slate-400 text-18 space-x-10 tracking-wider flex">
+          <Link className="transition hover:text-black dark:hover:text-white animate-fir animation-delay-100" href="/work">Work</Link>
+          <Link className="transition hover:text-black dark:hover:text-white animate-fir animation-delay-100" href="/about">About</Link>
+          <Link className="transition hover:text-black dark:hover:text-white animate-fir animation-delay-200" href="/contact">Contact</Link>
+          <button id="theme-toggle" type="button" onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')}>
+            {colorTheme === "light" ?
+              <Icon className="transition hover:text-black hover:cursor-pointer animate-fir animation-delay-200" icon="bi:sun" /> 
+            : <Icon className="transition hover:text-black hover:cursor-pointer animate-fir animation-delay-200" icon="bi:moon" />}
+          </button>
+        </nav>
+      </div>
+      <div className="border-b-0.5 opacity-0 animate-firl animation-delay-200" />
+    </>
   );
 }
 

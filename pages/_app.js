@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,9 +13,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div className="w-full">
         <Header />
-        <main>
+        <main className="">
           <Component {...pageProps} />
         </main>
+        <Footer />
       </div>
 
     </>

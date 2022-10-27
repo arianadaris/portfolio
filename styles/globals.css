@@ -23,19 +23,23 @@
 }
 
 @layer base {
+  body {
+    @apply bg-lightblue dark:bg-slate-900 text-black dark:text-white transition-all
+  }
+
   h1 {
-    @apply font-ogg text-7xl
+    @apply font-ogg text-7xl xl:text-70 py-7
   }
 
   h2 {
-    @apply font-ogg uppercase text-4xl
+    @apply font-ogg uppercase text-36
   }
 
   main {
-    @apply w-2/4 mx-auto my-10
+    @apply w-2/4 mx-auto my-10 xl:w-2/3
   }
 
   p {
-    @apply font-foundersLight text-3xl mt-2
+    @apply font-foundersLight text-24
   }
 }
