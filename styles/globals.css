@@ -1,26 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: FoundersRegular;
+  src: url('../public/fonts/FoundersGrotesk/foundersgrotesk-regular-webfont.woff') format('woff');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: Ogg;
+  src: url('../public/fonts/Ogg/ogg-roman-webfont.woff') format('woff');
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: FoundersLight;
+  src: url('../public/fonts/FoundersGrotesk/foundersgrotesk-light-webfont.woff') format('woff');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@font-face {
+  font-family: FoundersLightItalic;
+  src: url('../public/fonts/FoundersGrotesk/foundersgrotesk-lightitalic-webfont.woff');
+}
+
+@layer base {
+  h1 {
+    @apply font-ogg text-7xl
   }
-  body {
-    color: white;
-    background: black;
+
+  h2 {
+    @apply font-ogg uppercase text-4xl
+  }
+
+  main {
+    @apply w-2/4 mx-auto my-10
+  }
+
+  p {
+    @apply font-foundersLight text-3xl mt-2
   }
 }
