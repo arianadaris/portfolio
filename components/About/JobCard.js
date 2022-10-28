@@ -1,22 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
+import { Disclosure, Transition } from '@headlessui/react';
 
 const JobCard = (props) => {
-    const { date, title, company, duration, html } = props;
-    const [ open, isOpen ] = useState(false);
+    const { date, title, company, duration, description } = props;
+
+    const createDescriptor = (descriptor) => {
+        return <li className="mb-2">{ descriptor }</li>;
+    }
+
+    const descr = description.map((descriptor) => createDescriptor(descriptor));
 
     return (
-        <div className="flex flex-col mb-10">
-            <div className="w-5/6 bg-green mx-auto rounded-100 text-black px-12 py-8 hover:cursor-pointer flex justify-between hover:scale-105 transition" onClick={() => isOpen(true)}>
-                <p>{ title } - <span className="uppercase opacity-75 text-18">{ company }</span></p>
-                <div className="flex space-x-6">
-                    <p>{duration}</p>
-                    <Icon icon="bi:arrow-down"/>
-                </div>
-            </div>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-
+        <Disclosure>
+            {({ open }) => (
+            <>
+                <Disclosure.Button className={open ? 'flex flex-row justify-between w-5/6 bg-blue px-10 py-4 mb-2 rounded-100 mx-auto transition-[margin] duration-1000 hover:bg-blue dark:text-slate-800' : 'flex flex-row justify-between w-5/6 bg-neutral-200 px-10 py-4 mb-2 rounded-100 mx-auto transition-[margin] duration-1000 delay-500 hover:bg-blue dark:text-slate-800'}>
+                    <p>{ title } <span>- { company }</span></p>
+                    <div className="flex flex-row items-center">
+                        <p>{ duration }</p>
+                        <Icon className={open ? "ml-4 rotate-180 transition-transform" : "ml-4 transition-transform"} icon="dashicons:arrow-down-alt2" />
+                    </div>
+                </Disclosure.Button>
+                <Transition
+                    show={open}
+                    enter="transition duration-300 ease-out"
+                    enterFrom="transform scale-95 opacity-0"
+                    enterTo="transform scale-300 opacity-100"
+                    leave="transition duration-75 ease-out"
+                    leaveFrom="transform scale-300 opacity-100"
+                    leaveTo="transform scale-95 opacity-0"
+                >
+                    <Disclosure.Panel className="w-5/6 mx-auto px-10" static>
+                        { descr }
+                    </Disclosure.Panel>
+                </Transition>
+            </>
+            )}
+        </Disclosure>
   )
 }
 

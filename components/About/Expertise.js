@@ -32,7 +32,7 @@ const Expertise = () => {
             <div className="col-span-2 flex flex-col ml-16 mr-8">
                 <div className=" flex flex-1 w-full mr-50 border-b-0.5 mt-n10 opacity-25"/>
                 <p className="uppercase pt-10">Programming Languages</p>
-                <ul>
+                <ul className="mb-n10 flex justify-between mt-4">
                 <li>Javascript ES6</li>
                 <li>HTML/CSS</li>
                 <li>Java</li>
@@ -41,7 +41,7 @@ const Expertise = () => {
                 </ul>
                 <div className=" flex flex-1 w-full mr-50 border-b-0.5 opacity-25"/>
                 <p className="uppercase pt-10">Frameworks & Libraries</p>
-                <ul>
+                <ul className="mb-n10 flex justify-between mt-4">
                 <li>NextJS</li>
                 <li>ReactJS</li>
                 <li>NodeJS</li>
@@ -50,7 +50,7 @@ const Expertise = () => {
                 </ul>
                 <div className=" flex flex-1 w-full mr-50 border-b-0.5 opacity-25"/>
                 <p className="uppercase pt-10">Development & Design Tools</p>
-                <ul>
+                <ul className="mb-n10 flex justify-between mt-4">
                 <li>Visual Studio Code</li>
                 <li>Figma</li>
                 <li>Adobe XD</li>
