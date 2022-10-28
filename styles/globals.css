@@ -24,19 +24,19 @@
 
 @layer base {
   body {
-    @apply bg-lightblue dark:bg-slate-900 text-black dark:text-white transition-all
+    @apply bg-lightblue bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/Grain.svg')] dark:bg-[url('/DarkGrain.svg')] dark:bg-slate-900 text-black dark:text-white transition-all
   }
 
   h1 {
-    @apply font-ogg text-7xl xl:text-70 py-12
+    @apply font-ogg text-7xl py-12 text-68
   }
 
   h2 {
-    @apply font-ogg uppercase text-36
+    @apply font-ogg uppercase xl:text-36 
   }
 
   main {
-    @apply w-2/4 mx-auto my-10 xl:w-2/3
+    @apply mx-auto my-10 w-2/3 xs:w-['95%']
   }
 
   p {
@@ -45,5 +45,9 @@
 
   li {
     @apply font-foundersLight text-20 opacity-80
+  }
+
+  .personalIcon {
+    @apply 2xl:w-[85px] xl:w-[75px] lg:w-[55px] md:w-[30px] sm:w-[25px]
   }
 }

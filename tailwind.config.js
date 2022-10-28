@@ -28,6 +28,9 @@ module.exports = {
         pink: '#E2CFCF',
         lightblue: '#F4F7F7'
       },
+      screens: {
+        'xs': '0px'
+      },
       margin: {
         50: '5%',
         'n5': '-2.5%',
@@ -51,9 +54,13 @@ module.exports = {
         28: '1.4583vw',
         32: '1.667vw',
         36: '1.875vw',
+        40: '2.083vw',
+        44: '2.29167vw',
         48: '2.5vw',
+        58: '3.02083vw',
         60: '3.125vw',
-        70: '3.64583vw'
+        63: '3.28125vw',
+        68: '3.54167vw'
       },
       borderRadius: {
         100: '100px'
