@@ -28,11 +28,27 @@ module.exports = {
         pink: '#E2CFCF',
         lightblue: '#F4F7F7'
       },
+      margin: {
+        50: '5%',
+        'n5': '-2.5%',
+        'n10': '-5%'
+      },
+      spacing: {
+        'neg1': '-150px',
+        'neg2': '-125px'
+      },
+      width: {
+        105: '105%'
+      },
+      height: {
+        'screen80': '75vh'
+      },
       fontSize: {
         14: '0.729vw',
         16: '0.833vw',
         18: '0.9375vw',
         24: '1.25vw',
+        28: '1.4583vw',
         32: '1.667vw',
         36: '1.875vw',
         48: '2.5vw',
@@ -41,6 +57,12 @@ module.exports = {
       },
       borderRadius: {
         100: '100px'
+      },
+      animationDelay: {
+        1600: '1600ms',
+        1700: '1700ms',
+        1800: '1800ms',
+        1900: '1900ms'
       },
       keyframes: {
         slide: {
@@ -71,16 +93,38 @@ module.exports = {
             width: '100%'
           }
         },
+        ups: {
+          '0%': {
+            opacity: 0,
+              transform: 'translateY(50%)'
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)'
+          },
+        },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-10deg)' },
           '50%': { transform: 'rotate(10deg)' },
+        },
+        turn: {
+          '0%': { transform: 'rotate(0deg)'},
+          '100%': { transform: 'rotate(360deg)'}
+        },
+        appear: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
         }
+
       },
       animation: {
           slide: 'slide 2s ease-in-out infinite',
-          fir: 'fir ease 0.4s forwards',
-          firl: 'firl ease 0.4s forwards',
-          wiggle: 'wiggle 2s ease-in-out infinite'
+          fir: 'fir ease 1s forwards',
+          firl: 'firl ease 0.8s forwards',
+          up: 'ups 1s ease-in-out forwards',
+          wiggle: 'wiggle 2s ease-in-out infinite',
+          turn: 'turn 12s linear infinite',
+          appear: 'appear 0.5s linear forwards'
       },
       
     }

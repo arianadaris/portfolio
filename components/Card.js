@@ -15,7 +15,7 @@ const Card = (props) => {
 
     useEffect(() => {
         inView ? control.start('visible') : control.start('hidden');
-    }, [control, inView])
+    }, [control, inView]);
 
     const scrollUp = {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: delay }},
@@ -29,10 +29,10 @@ const Card = (props) => {
     const tagElements = tags.map((tag) => createTag(tag));
 
     return (
-        <motion.div className={'card text-white flex-col px-4 pb-4 mb-20'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial="hidden" animate={control}>
+        <motion.div className={'card text-white flex-col px-14 pb-8 mb-20'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial="hidden" animate={control}>
             <div className="pt-2 transition hover:scale-95 hover:cursor-pointer">
-                <p className="text-48 absolute">0{ num }.</p>
-                <Image className="mx-auto pt-10 mt-10" width={350} height={350} layout="responsive" src={cover} alt={ projectTitle } />
+                <p className="text-48 pt-5">0{ num }.</p>
+                <Image className="mx-auto pt-0 mt-10" width={700} height={700} layout="responsive" src={cover} alt={ projectTitle } />
                 <div className="flex items-center justify-between mt-8">
                     <p className="text-48">{ projectTitle }</p>
                     <div className="flex items-center text-48 space-x-2 mt-2">

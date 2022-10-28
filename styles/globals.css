@@ -28,7 +28,7 @@
   }
 
   h1 {
-    @apply font-ogg text-7xl xl:text-70 py-7
+    @apply font-ogg text-7xl xl:text-70 py-12
   }
 
   h2 {
@@ -40,6 +40,14 @@
   }
 
   p {
-    @apply font-foundersLight text-24
+    @apply font-foundersLight text-24 
+  }
+
+  li {
+    @apply font-foundersLight text-18 
+  }
+
+  ul {
+    @apply flex justify-between mt-4 mb-n10
   }
 }
