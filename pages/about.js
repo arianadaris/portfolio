@@ -16,15 +16,15 @@ import DevCircle from '../public/images/DevCircle.svg';
 const about = ({ posts }) => {
   // Format job cards
   const cards = posts.map( (data, index ) => {
-    const { frontMatter, html } = data;
-    const { date, title, company, duration } = frontMatter; 
+    const { frontMatter } = data;
+    const { date, title, company, duration, description } = frontMatter; 
     return <Card 
       key={ index }
       date={ date }
       title={ title }
       company={ company }
       duration={ duration }
-      post={html}
+      description ={ description }
     />
   });
   //test
@@ -48,7 +48,7 @@ const about = ({ posts }) => {
           </div>
           <div className="col-span-2">
             <div className="w-fit mx-auto p-2 pb-10 border-0.5 rounded-tl-full rounded-tr-full flex-col animate-appear animation-delay-1100 opacity-0">
-              <Image className="mx-auto" height={550} layout="responsive" src={require('../public/images/personal/PersonalFrame.png')} alt="Ariana Daris" />
+              <Image className="mx-auto" height={350} layout="responsive" src={require('../public/images/personal/PersonalFrame.png')} alt="Ariana Daris" />
               <div className="w-fit mx-auto mt-4 mb-0 p-3">
                 <Socials />
               </div>
@@ -61,12 +61,12 @@ const about = ({ posts }) => {
           <div className="w-1/3 animate-fir animation-delay-1500 opacity-0">
             <p className="uppercase opacity-75 mb-4">Education</p>
             <p className="leading-none">Computer Science, B.S.</p>
-            <p className="text-foundersLightI text-18 leading-none">Arizona State University</p>
+            <p className="text-foundersLightI text-20 leading-none">Arizona State University</p>
           </div>
           <div className="flex flex-1 mr-50 border-r-0.5 animate-fir animation-delay-1500 opacity-0"/>
           <div className="animate-fir animation-delay-1700 opacity-0">
             <p className="uppercase opacity-75 mb-4">Specialized In</p>
-            <p className="leading-none">Software Development & Fullstack Development</p>
+            <p className="leading-none">Software Development & Full-stack Development</p>
           </div>
           <div className="flex flex-1 mr-50 border-r-0.5 animate-fir animation-delay-1800 opacity-0"/>
           <div className="animate-fir animation-delay-2000 opacity-0">
@@ -81,9 +81,13 @@ const about = ({ posts }) => {
         {/* My Experience */}
         <StarredPhrase firstWord="My" secondWord="Experience" />
         <p className="my-8">While completing my ungraduate degree, I have had the opportunity to work for amazing tech companies which have inspired me in varous ways to continue learning about software development.</p>
-        { cards }
+
         
-        {/* Job Cards */}
+        {/* Job Cards */}   
+        <div className="">
+          { cards }
+        </div>
+
 
         {/* Contact Section */}
         <Contact />

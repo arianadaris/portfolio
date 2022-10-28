@@ -39,7 +39,7 @@ const Home = ({ posts }) => {
 
       {/* Introduction */}
       <div className="flex items-center origin-left animate-fir opacity-0 animation-delay-1300">
-        <h1 >Fullstack Developer</h1>
+        <h1 >Full-stack Developer</h1>
         <span className="p-1 mx-4 border-0.5 rounded-100">
           <Image width={85} layout="responsive" src={require('../public/images/personal/PersonalIcon.png')} alt="Ariana Daris" />
         </span>

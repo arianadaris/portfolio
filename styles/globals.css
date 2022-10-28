@@ -44,10 +44,6 @@
   }
 
   li {
-    @apply font-foundersLight text-18 
-  }
-
-  ul {
-    @apply flex justify-between mt-4 mb-n10
+    @apply font-foundersLight text-20 opacity-80
   }
 }

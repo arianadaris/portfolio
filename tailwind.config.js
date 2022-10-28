@@ -46,7 +46,7 @@ module.exports = {
       fontSize: {
         14: '0.729vw',
         16: '0.833vw',
-        18: '0.9375vw',
+        20: '1.04167vw',
         24: '1.25vw',
         28: '1.4583vw',
         32: '1.667vw',
@@ -57,6 +57,9 @@ module.exports = {
       },
       borderRadius: {
         100: '100px'
+      },
+      transitionProperty: {
+        'height': 'height'
       },
       animationDelay: {
         1600: '1600ms',
