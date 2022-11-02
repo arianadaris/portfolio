@@ -7,13 +7,17 @@ import StarredPhrase from '../StarredPhrase';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import useWindowSize from '../../hooks/useWindowSize';
+
 const Experience = ({ posts }) => {
     const [ selected, setSelected ] = useState(null);
     const control = useAnimation();
     const [ ref, inView ] = useInView();
+    const size = useWindowSize();
 
     useEffect(() => {
-        inView ? control.start('visible') : control.start('hidden');
+        if(size.width > 768)
+            inView ? control.start('visible') : control.start('hidden');
     }, [control, inView]);
 
     const scrollUp = {
@@ -30,7 +34,7 @@ const Experience = ({ posts }) => {
     }
 
     return (
-        <motion.div ref={ref} variants={scrollUp} initial="hidden" animate={control}>
+        <motion.div ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
             <StarredPhrase firstWord="My" secondWord="Experience" />
             <p className="mt-4 xs:hidden md:flex">While completing my undergraduate degree, I have had the opportunity to work for amazing tech companies which have inspired me in various ways to continue learning about software development.</p>
             <div className="accordion">

@@ -6,12 +6,16 @@ import OutlinedButton from '../OutlinedButton';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import useWindowSize from '../../hooks/useWindowSize';
+
 const Expertise = () => {
     const control = useAnimation();
     const [ ref, inView ] = useInView();
+    const size = useWindowSize();
 
     useEffect(() => {
-        inView ? control.start('visible') : control.start('hidden');
+        if(size.width > 768)
+            inView ? control.start('visible') : control.start('hidden');
     }, [control, inView]);
 
     const scrollUp = {
@@ -21,7 +25,7 @@ const Expertise = () => {
 
     return (
         <>
-            <motion.div className="bg-blue w-105 ml-n5 my-20 px-10 pt-16 pb-20 md:grid md:grid-cols-3 xs:flex xs:flex-col dark:text-slate-900 relative z-10" ref={ref} variants={scrollUp} initial="hidden" animate={control}>
+            <motion.div className="bg-blue w-105 ml-n5 my-20 px-10 pt-16 pb-20 md:grid md:grid-cols-3 xs:flex xs:flex-col dark:text-slate-900 relative z-10" ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
             {/* <DevCircle className="animate-turn absolute right-neg1 top-neg2 z-0"/> */}
             <div className="col-span-1">
                 <h1 className="md:text-36 xs:text-[6vw]">My Expertise</h1>
