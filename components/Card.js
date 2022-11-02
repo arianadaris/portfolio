@@ -6,15 +6,19 @@ import { Icon } from '@iconify/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+import useWindowSize from '../hooks/useWindowSize';
+
 const Card = (props) => {
-    const { color, num, projectTitle, cover, github, tags } = props;
+    const { color, num, projectTitle, cover, github, external, tags } = props;
     const control = useAnimation();
     const [ ref, inView ] = useInView();
+    const size = useWindowSize();
 
     var delay = num % 2 === 1 ? 0.25 : 0.75;
 
     useEffect(() => {
-        inView ? control.start('visible') : control.start('hidden');
+        if(size.width > 768)
+            inView ? control.start('visible') : control.start('hidden');
     }, [control, inView])
 
     const scrollUp = {
@@ -29,7 +33,7 @@ const Card = (props) => {
     const tagElements = tags.map((tag) => createTag(tag));
 
     return (
-        <motion.div className={'card text-white flex-col xs:pb-4 md:pb-0 md:px-4 xs:px-2 md:mb-20 xs:mb-5 xs:mx-auto xs:w-auto'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial="hidden" animate={control}>
+        <motion.div className={'card text-white flex-col xs:pb-4 md:pb-0 md:px-4 xs:px-2 md:mb-20 xs:mb-5 xs:mx-auto xs:w-auto'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
             <div className="xs:pt-2 transition hover:scale-95 hover:cursor-pointer">
                 <p className="absolute md:text-36">0{ num }.</p>
                 <Image className="mx-auto md:pt-10 mt-10 pr-4" width={350} height={350} layout="responsive" src={cover} alt={ projectTitle } />
@@ -37,7 +41,7 @@ const Card = (props) => {
                     <p className="md:text-36">{ projectTitle }</p>
                     <div className="flex items-center md:text-48 xs:text-[5vw] space-x-2 xs:mt-2 md:mt-0">
                         <a href={github} target="_blank" rel="noreferrer"><Icon className="transition hover:scale-105" icon="akar-icons:github-outline-fill" /></a>
-                        <Icon className="transition hover:scale-105" icon="bi:arrow-up-right" />
+                        {external ? <a href={external} target="_blank" rel="noreferrer"><Icon className="transition hover:scale-105" icon="bi:arrow-up-right" /></a> : ''}
                     </div>
                 </div>
                 <div className="flex flex-wrap mt-4 space-x-2 md:mt-20 xs:mt-0">

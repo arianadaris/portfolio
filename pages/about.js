@@ -17,14 +17,14 @@ const About = ({ posts }) => {
   return (
     <>
         {/* About Me */}
-        <div className="animate-fir animation-delay-300 opacity-0">
+        <div className="md:animate-fir xs:animate-none animation-delay-300 opacity-0">
           <StarredPhrase firstWord="About" secondWord="Me" />
         </div>
 
         <div className="md:grid md:grid-cols-5 md:gap-4 xs:mb-[-8vh]">
           <div className="col-span-3">
-            <h1 className="animate-fir animation-delay-700 opacity-0">Hi, I&apos;m Ariana Daris!</h1>
-            <p className="animate-fir animation-delay-1000 opacity-0 xs:mt-0 md:mt-4">
+            <h1 className="md:animate-fir xs:animate-none animation-delay-700 opacity-0">Hi, I&apos;m Ariana Daris!</h1>
+            <p className="md:animate-fir xs:animate-none animation-delay-1000 opacity-0 xs:mt-0 md:mt-4">
               I&apos;m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor&apos;s degree, and anticipate earning a Master&apos;s degree in Computer Science the following December.
             </p>
             <p className="animate-fir animation-delay-1000 opacity-0">

@@ -27,6 +27,7 @@ const Home = ({ posts }) => {
       projectTitle={ post.title }
       cover={ post.cover }
       github={ post.github }
+      external={ post.external }
       tags={ post.tags }
     />;
   });
@@ -63,10 +64,10 @@ const Home = ({ posts }) => {
       {/* Project Cards */}
 
       { size.width > 768 ? <div className="grid md:grid-cols-2 md:gap-5 xs:grid-cols-1 w-inherit border-red-50 border-x-1">
-        <div className="opacity-0 animate-up animation-delay-2000">
+        <div className="opacity-0 animate-up animation-delay-1000">
             { leftPosts.slice(0, 2) }
           </div>
-        <div className="opacity-0 animate-up animation-delay-2000">
+        <div className="opacity-0 animate-up animation-delay-1000">
             { rightPosts.slice(0, 2) }
         </div>
       </div> : <div>{ cards.slice(0, 4) }</div>}
