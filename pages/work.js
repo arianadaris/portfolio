@@ -10,7 +10,7 @@ import Card from '../components/Card';
 
 import useWindowSize from '../hooks/useWindowSize';
 
-const work = ({ posts }) => {
+const Work = ({ posts }) => {
   const size = useWindowSize();
 
   // Format project cards
@@ -79,4 +79,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default work;
+export default Work;

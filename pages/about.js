@@ -23,12 +23,12 @@ const About = ({ posts }) => {
 
         <div className="md:grid md:grid-cols-5 md:gap-4 xs:mb-[-8vh]">
           <div className="col-span-3">
-            <h1 className="animate-fir animation-delay-700 opacity-0">Hi, I'm Ariana Daris!</h1>
+            <h1 className="animate-fir animation-delay-700 opacity-0">Hi, I&apos;m Ariana Daris!</h1>
             <p className="animate-fir animation-delay-1000 opacity-0 xs:mt-0 md:mt-4">
-              I’m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor’s degree, and anticipate earning a Master’s degree in Computer Science the following December.
+              I&apos;m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor&apos;s degree, and anticipate earning a Master&apos;s degree in Computer Science the following December.
             </p>
             <p className="animate-fir animation-delay-1000 opacity-0">
-              Outside of school, I enjoy learning about front-end development and UX/UI design. I’m a people person, and I love that I can use code to get to know people and create something beautiful with them! With front-end development, it’s a gratifying feeling seeing how a few lines of code can make the biggest difference for someone else.
+              Outside of school, I enjoy learning about front-end development and UX/UI design. I&apos;m a people person, and I love that I can use code to get to know people and create something beautiful with them! With front-end development, it&apos;s a gratifying feeling seeing how a few lines of code can make the biggest difference for someone else.
             </p>
           </div>
           <div className="col-span-2">
