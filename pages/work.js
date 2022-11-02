@@ -23,6 +23,7 @@ const Work = ({ posts }) => {
       projectTitle={ post.title }
       cover={ post.cover }
       github={ post.github }
+      external={ post.external }
       tags={ post.tags }
     />;
   })
