@@ -10,7 +10,7 @@ const contact = () => {
   return (
     <div className="md:h-[68vh] xs:h-[72.5vh]">
       {/* Let's Chat */}
-      <div className="animate-fir animation-delay-300 opacity-0">
+      <div className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-300">
         <StarredPhrase firstWord="Let&apos;s" secondWord="Chat" />
       </div>
 

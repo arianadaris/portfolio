@@ -39,19 +39,19 @@ const Home = ({ posts }) => {
   return (
     <div className="w-inherit">
       {/* Impact Driven Phrase */}
-      <div className="animate-fir animation-delay-1000 opacity-0">
+      <div className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-1000">
         <StarredPhrase firstWord="Impact" secondWord="Driven" />
       </div>
 
       {/* Introduction */}
-      <div className="flex items-center origin-left animate-fir opacity-0 animation-delay-1300 xs:flex-wrap md:flex-nowrap">
+      <div className="flex items-center origin-left md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-1300 xs:flex-wrap md:flex-nowrap">
         <h1>Full-stack Developer</h1>
         <span className="p-1 md:mx-4 xs:mx-2 border-0.5 rounded-100">
           <Image className="personalIcon" layout="responsive" src={require('../public/images/personal/PersonalIcon.png')} alt="Ariana Daris" />
         </span>
         <h1>UX/UI Designer</h1>
       </div>
-      <div className="grid md:grid-cols-4 xs:grid-cols-1 animate-fir opacity-0 animation-delay-1500 mb-10">
+      <div className="grid md:grid-cols-4 xs:grid-cols-1 md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-1500 mb-10">
         <p className="col-span-3 xs:text-[5vw] md:text-24 md:mt-6">
           I am a creative developer and designer based in the United States. I create beautiful and engaging experiences for all users with empathy and inclusion in mind.
         </p>
@@ -64,10 +64,10 @@ const Home = ({ posts }) => {
       {/* Project Cards */}
 
       { size.width > 768 ? <div className="grid md:grid-cols-2 md:gap-5 xs:grid-cols-1 w-inherit border-red-50 border-x-1">
-        <div className="opacity-0 animate-up animation-delay-1000">
+        <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-1000">
             { leftPosts.slice(0, 2) }
           </div>
-        <div className="opacity-0 animate-up animation-delay-1000">
+        <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-1000">
             { rightPosts.slice(0, 2) }
         </div>
       </div> : <div>{ cards.slice(0, 4) }</div>}

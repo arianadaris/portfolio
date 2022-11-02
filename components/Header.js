@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       <div className="flex justify-between items-center md:px-14 xs:px-6 pt-8 pb-6 font-foundersLight uppercase border">
-        <Link className="tracking-widest md:text-32 xs:text-68 animate-fir" href="/" onClick={() => toggle()}>Ariana Daris</Link>
+        <Link className="tracking-widest md:text-32 xs:text-68 animate-fir" href="/" onClick={() => isOpen ? toggle() : ''}>Ariana Daris</Link>
         <nav className="text-neutral-400 dark:text-slate-400 text-18 space-x-10 tracking-wider flex xs:hidden md:flex">
           <Link className={router.pathname == "/work" ? "active" : "navItem"} href="/work">Work</Link>
           <Link className={router.pathname == "/about" ? "active" : "navItem"} href="/about">About</Link>
@@ -49,11 +49,11 @@ const Header = () => {
 
       {/* Mobile navigation menu */}
       <div className={isOpen ? "md:hidden xs:flex xs:headerContent xs:headerShow" : "md:hidden xs:flex xs:headerContent"} ref={mobileMenu}>
-        <button className="absolute right-10" id="theme-toggle" type="button" onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')}>
+        {/* <button className="absolute right-10" id="theme-toggle" type="button" onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')}>
           {colorTheme === "light" ?
             <Icon className="active" icon="bi:sun" /> 
           : <Icon className="navItem animation-delay-500" icon="bi:moon" />}
-        </button>
+        </button> */}
         <Link className={router.pathname == "/work" ? "headerActive" : "headerItem"} href="/work" onClick={() => toggle()}>Work</Link>
         <Link className={router.pathname == "/about" ? "headerActive" : "headerItem"} href="/about" onClick={() => toggle()}>About</Link>
         <Link className={router.pathname == "/contact" ? "headerActive" : "headerItem animation-delay-500"} href="/contact" onClick={() => toggle()}>Contact</Link>

@@ -66,7 +66,7 @@
   }
 
   .headerActive {
-    @apply text-black dark:text-white opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200 font-ogg md:mt-12 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 
+    @apply text-black dark:text-white hover:text-black dark:hover:text-white font-ogg md:mt-12 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 
   }
 
   .title {
@@ -78,18 +78,18 @@
   }
 
   .headerContent {
-    @apply mx-auto w-5/6 overflow-hidden max-h-0 transition-all ease-out-expo opacity-0
+    @apply mx-auto w-5/6 overflow-hidden max-h-0 
   }
 
   .show {
-      @apply h-auto max-h-[9999px] transition-all ease-in-expo
+      @apply h-auto max-h-[9999px]
   }
 
   .headerShow {
-    @apply h-auto max-h-[9999px] transition-all ease-in-expo flex items-center flex-col space-y-10 mt-6 overflow-hidden mb-10 opacity-100
+    @apply h-auto max-h-[9999px] flex items-center flex-col space-y-10 mt-6 overflow-hidden mb-10 
   }
 
   .headerItem {
-    @apply opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200 font-ogg md:mt-12 xs:mt-4 md:text-68 xs:text-[8vw] leading-10 
+    @apply hover:text-black dark:hover:text-white font-ogg md:mt-12 xs:mt-4 md:text-68 xs:text-[8vw] leading-10 
   }
 }
