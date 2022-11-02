@@ -14,7 +14,7 @@ module.exports = {
     },
     borderWidth: {
       0.5: '0.5px',
-      1: '1px'
+      0.1: '0.1px'
     },
     extend: {
       colors: {
@@ -43,9 +43,6 @@ module.exports = {
       width: {
         105: '105%'
       },
-      height: {
-        'screen80': '75vh'
-      },
       fontSize: {
         14: '0.729vw',
         16: '0.833vw',
@@ -65,8 +62,9 @@ module.exports = {
       borderRadius: {
         100: '100px'
       },
-      transitionProperty: {
-        'height': 'height'
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(1, 0, 1, 0)',
+        'out-expo': 'cubic-bezier(0, 1, 0, 1)'
       },
       animationDelay: {
         1600: '1600ms',

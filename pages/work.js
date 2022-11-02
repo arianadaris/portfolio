@@ -8,8 +8,11 @@ import matter from 'gray-matter';
 import StarredPhrase from '../components/StarredPhrase';
 import Card from '../components/Card';
 
+import useWindowSize from '../hooks/useWindowSize';
 
 const work = ({ posts }) => {
+  const size = useWindowSize();
+
   // Format project cards
   const cards = posts.map( (data, index) => {
     var post = data.frontMatter;
@@ -35,18 +38,20 @@ const work = ({ posts }) => {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-2 gap-14 mt-16">
+      { 
+        size.width > 768 ? <div className="grid grid-cols-2 gap-14 mt-16">
         <div>
           <div className="opacity-0 animate-up animation-delay-500">
             { leftPosts }
           </div>
         </div>
         <div>
-          <div className="opacity-0 animate-up animation-delay-500 mt-16">
+          <div className="opacity-0 animate-up animation-delay-500">
             { rightPosts }
           </div>
         </div>
-      </div> 
+      </div> : <div className="mt-10">{ cards }</div>
+      }
     </>
   )
 }

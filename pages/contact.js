@@ -8,18 +8,20 @@ import Socials from '../components/Socials';
 
 const contact = () => {
   return (
-    <div className="h-screen80">
+    <div className="md:h-[68vh] xs:h-[72.5vh]">
       {/* Let's Chat */}
       <div className="animate-fir animation-delay-300 opacity-0">
         <StarredPhrase firstWord="Let's" secondWord="Chat" />
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h1>Hi again!</h1>
-        <p>I would love to get in touch and talk about your next project!</p>
+        <h1 className="md:mt-0 xs:mt-10">Hi again!</h1>
+        <p className="mt-10">I would love to get in touch and talk about your next project!</p>
         <p>Feel free to send me an email and let's connect!</p>
         <EmailButton />
-        <Socials />
+        <div className="md:mt-0 xs:mt-10">
+          <Socials />
+        </div>
       </div>
     </div>
   )

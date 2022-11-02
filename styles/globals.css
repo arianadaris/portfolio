@@ -22,32 +22,74 @@
   src: url('../public/fonts/FoundersGrotesk/foundersgrotesk-lightitalic-webfont.woff');
 }
 
+
+
 @layer base {
   body {
-    @apply bg-lightblue bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/Grain.svg')] dark:bg-[url('/DarkGrain.svg')] dark:bg-slate-900 text-black dark:text-white transition-all
+    @apply bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/Grain.svg')] dark:bg-[url('/DarkGrain.svg')] dark:bg-[#0D0D0D] text-black dark:text-white transition-all w-full
   }
 
   h1 {
-    @apply font-ogg text-7xl py-12 text-68
+    @apply font-ogg md:mt-12 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 
   }
 
   h2 {
-    @apply font-ogg uppercase xl:text-36 
+    @apply font-ogg uppercase md:text-48 xs:text-[5vw]
   }
 
   main {
-    @apply mx-auto my-10 w-2/3 xs:w-['95%']
+    @apply mx-auto my-10 md:w-2/3 xs:w-3/4
   }
 
   p {
-    @apply font-foundersLight text-24 
+    @apply font-foundersLight md:text-24 xs:text-[5vw] md:pt-10 xs:pt-4 md:pb-4 xs:pb-8 md:mt-[-4.5vh] xs:mb-[-2.5vh]
   }
 
   li {
-    @apply font-foundersLight text-20 opacity-80
+    @apply font-foundersLight md:text-20 xs:text-[5vw] opacity-80
+  }
+}
+
+
+
+@layer components {
+  .personalIcon {
+    @apply 2xl:w-[85px] xl:w-[75px] lg:w-[55px] md:w-[45px] xs:w-[45px]
   }
 
-  .personalIcon {
-    @apply 2xl:w-[85px] xl:w-[75px] lg:w-[55px] md:w-[30px] sm:w-[25px]
+  .navItem {
+    @apply opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200 dark:text-neutral-400
+  }
+
+  .active {
+    @apply text-black dark:text-white opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200
+  }
+
+  .headerActive {
+    @apply text-black dark:text-white opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200 font-ogg md:mt-12 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 
+  }
+
+  .title {
+    @apply flex flex-row justify-between items-center md:w-5/6 xs:w-full bg-neutral-200 rounded-100 mx-auto px-10 py-4 hover:bg-blue hover:cursor-pointer transition mt-8 dark:text-[#3C3C3C]
+  }
+
+  .content {
+    @apply mx-auto w-5/6 overflow-hidden max-h-0 transition-all ease-out-expo
+  }
+
+  .headerContent {
+    @apply mx-auto w-5/6 overflow-hidden max-h-0 transition-all ease-out-expo opacity-0
+  }
+
+  .show {
+      @apply h-auto max-h-[9999px] transition-all ease-in-expo
+  }
+
+  .headerShow {
+    @apply h-auto max-h-[9999px] transition-all ease-in-expo flex items-center flex-col space-y-10 mt-6 overflow-hidden mb-10 opacity-100
+  }
+
+  .headerItem {
+    @apply opacity-0 transition hover:text-black dark:hover:text-white animate-fir animation-delay-200 font-ogg md:mt-12 xs:mt-4 md:text-68 xs:text-[8vw] leading-10 
   }
 }
