@@ -32,7 +32,7 @@ const Experience = ({ posts }) => {
     return (
         <motion.div ref={ref} variants={scrollUp} initial="hidden" animate={control}>
             <StarredPhrase firstWord="My" secondWord="Experience" />
-            <p className="mt-4 xs:hidden md:flex">While completing my ungraduate degree, I have had the opportunity to work for amazing tech companies which have inspired me in varous ways to continue learning about software development.</p>
+            <p className="mt-4 xs:hidden md:flex">While completing my undergraduate degree, I have had the opportunity to work for amazing tech companies which have inspired me in various ways to continue learning about software development.</p>
             <div className="accordion">
                 {
                 posts.map((data, index) => {

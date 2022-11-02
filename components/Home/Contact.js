@@ -24,8 +24,8 @@ const Contact = () => {
     return (
         <motion.div ref={ref} variants={scrollUp} initial="hidden" animate={control}>
             <StarredPhrase firstWord="Contact" secondWord="Me" />
-            <h1 className="md:text-48">Let's Get In Touch!</h1>
-            <p className="xs:text-[5vw] md:text-24">Whether you’re just saying <span role="img" aria-label="Wave">{String.fromCodePoint(symbol)}</span>, or you’re looking to start a new project, feel free to send me a message! Currently, I am open to remote freelancing work.</p>
+            <h1 className="md:text-48">Let&apos;s Get In Touch!</h1>
+            <p className="xs:text-[5vw] md:text-24">Whether you&apos;re just saying <span role="img" aria-label="Wave">{String.fromCodePoint(symbol)}</span>, or you’re looking to start a new project, feel free to send me a message! Currently, I am open to remote freelancing work.</p>
             <EmailButton />
         </motion.div>
     )
