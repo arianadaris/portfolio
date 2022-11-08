@@ -24,7 +24,7 @@ const About = ({ posts }) => {
         <div className="md:grid md:grid-cols-5 md:gap-4 xs:mb-[-8vh]">
           <div className="col-span-3">
             <h1 className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-700">Hi, I&apos;m Ariana Daris!</h1>
-            <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000 xs:mt-0 md:mt-4">
+            <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000 xs:mt-0 md:mt-4 xs:mb-0 md:mb-6">
               I&apos;m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor&apos;s degree, and anticipate earning a Master&apos;s degree in Computer Science the following December.
             </p>
             <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000">
@@ -42,7 +42,7 @@ const About = ({ posts }) => {
         </div>
 
         {/* Education, Specializations, Familiarity */}
-        <div className="flex md:justify-between xs:flex-col md:flex-row md:mt-40 xs:mt-20">
+        <div className="flex md:justify-between xs:flex-col md:flex-row md:mt-[12.5rem] xs:mt-20">
           <div className="md:w-1/3 xs:w-fit md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1500">
             <p className="pt-0 uppercase opacity-75 md:mb-4 xs:mb-0">Education</p>
             <p className="pt-0 xs:mt-[-2.5vh] md:mt-0 leading-none">Computer Science, B.S.</p>
@@ -65,7 +65,6 @@ const About = ({ posts }) => {
 
         {/* My Experience */} 
         <Experience posts={posts} />
-
 
         {/* Contact Section */}
         <Contact />

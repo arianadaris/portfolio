@@ -17,7 +17,8 @@ const Card = (props) => {
     var delay = num % 2 === 1 ? 0 : 0.5;
 
     useEffect(() => {
-        inView ? control.start('visible') : control.start('hidden');
+        if(size.width > 768)
+            inView ? control.start('visible') : control.start('hidden');
     }, [control, inView])
 
     const scrollUp = {
@@ -26,7 +27,7 @@ const Card = (props) => {
     };
 
     const createTag = (tag) => {
-        return <p className="border-white border-0.5 rounded-100 px-4 py-2 xs:mb-0 md:mb-14 xs:text-[3vw] md:text-24">{ tag }</p>;
+        return <p className="border-white border-0.5 rounded-100 px-4 py-2 xs:mb-2 md:mb-16 xs:text-[3vw] md:text-24">{ tag }</p>;
     };
 
     const tagElements = tags.map((tag) => createTag(tag));

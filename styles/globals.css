@@ -42,7 +42,7 @@
   }
 
   p {
-    @apply font-foundersLight md:text-24 xs:text-[5vw] md:pt-10 xs:pt-4 md:pb-4 xs:pb-8 md:mt-[-4.5vh] xs:mb-[-2.5vh]
+    @apply font-foundersLight md:text-24 xs:text-[5vw] md:pt-10 xs:pt-4 md:pb-4 xs:pb-8 md:mt-[-5.5vh] xs:mb-[-2.5vh]
   }
 
   li {
@@ -70,7 +70,7 @@
   }
 
   .title {
-    @apply flex flex-row justify-between items-center md:w-5/6 xs:w-full bg-neutral-200 rounded-100 mx-auto px-10 py-4 hover:bg-blue hover:cursor-pointer transition mt-8 dark:text-[#3C3C3C]
+    @apply flex flex-row justify-between items-center md:w-5/6 xs:w-full bg-neutral-200 rounded-100 mx-auto px-10 xs:py-4 md:py-6 hover:bg-blue hover:cursor-pointer transition mt-8 dark:text-[#3C3C3C]
   }
 
   .content {
@@ -78,7 +78,7 @@
   }
 
   .headerContent {
-    @apply mx-auto w-5/6 overflow-hidden max-h-0 
+    @apply mx-auto w-5/6 overflow-hidden max-h-0
   }
 
   .show {

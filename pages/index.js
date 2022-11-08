@@ -51,7 +51,7 @@ const Home = ({ posts }) => {
         </span>
         <h1>UX/UI Designer</h1>
       </div>
-      <div className="grid md:grid-cols-4 xs:grid-cols-1 md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1500 mb-10">
+      <div className="grid md:grid-cols-4 xs:grid-cols-1 md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1500 mb-12">
         <p className="col-span-3 xs:text-[5vw] md:text-24 md:mt-6">
           I am a creative developer and designer based in the United States. I create beautiful and engaging experiences for all users with empathy and inclusion in mind.
         </p>
@@ -62,7 +62,6 @@ const Home = ({ posts }) => {
 
 
       {/* Project Cards */}
-
       { size.width > 768 ? <div className="grid md:grid-cols-2 md:gap-5 xs:grid-cols-1 w-inherit border-red-50 border-x-1">
         <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1500">
             { leftPosts.slice(0, 2) }
@@ -71,9 +70,6 @@ const Home = ({ posts }) => {
             { rightPosts.slice(0, 2) }
         </div>
       </div> : <div>{ cards.slice(0, 4) }</div>}
-      {/* <div className="flex flex-row justify-center mt-[-5vh] mb-10">
-        <OutlinedButton title="View More Work" link="/work" delay='0.3'/> 
-      </div> */}
 
       {/* Contact Section */}
       <Contact />

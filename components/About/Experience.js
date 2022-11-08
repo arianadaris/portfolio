@@ -41,10 +41,10 @@ const Experience = ({ posts }) => {
                 {
                 posts.map((data, index) => {
                     const { frontMatter } = data;
-                    const { date, title, company, duration, description } = frontMatter;
+                    const { title, company, duration, description } = frontMatter;
 
                     return (
-                    <div className="item" key={index}>
+                    <div key={index}>
                         <div className={selected === index ? "title bg-blue" : "title"} onClick={() => toggle(index)}>
                             <p>{ title } <span>- { company }</span></p>
                             <div className="flex flex-row items-center">
