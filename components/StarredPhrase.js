@@ -12,7 +12,7 @@ const StarredPhrase = (props) => {
                 <Dawn className="md:mx-3 xs:mx-1 md:w-10 md:h-10 xs:h-5 xs:w-5 fill-[#4F4F4F] stroke-[#4F4F4F] dark:fill-white dark:stroke-white" />
                 <h2>{ secondWord }</h2>
             </div>
-            <div className="flex flex-row flex-1 w-full opacity-0 md:ml-10 xs:ml-4 border-b-0.5 md:border-black dark:border-white xs:border-gray animate-firl animation-delay-300 "/>
+            <div className="flex flex-row flex-1 w-full opacity-0 md:ml-10 xs:ml-4 border-b-0.5 md:border-black dark:border-white xs:border-gray animate-firl md:animation-delay-300 "/>
         </div>
   );
 }
