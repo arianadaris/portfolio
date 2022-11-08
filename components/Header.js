@@ -36,32 +36,32 @@ const Header = () => {
         <nav className="text-neutral-400 dark:text-slate-400 text-18 space-x-10 tracking-wider flex xs:hidden md:flex">
           <Link className={router.pathname == "/work" ? "active" : "navItem"} href="/work">Work</Link>
           <Link className={router.pathname == "/about" ? "active" : "navItem"} href="/about">About</Link>
-          <Link className={router.pathname == "/contact" ? "active" : "navItem animation-delay-500"} href="/contact">Contact</Link>
+          <Link className={router.pathname == "/contact" ? "active" : "navItem md:animation-delay-500"} href="/contact">Contact</Link>
           <button id="theme-toggle" type="button" onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')}>
             {colorTheme === "light" ?
               <Icon className="active" icon="bi:sun" /> 
-            : <Icon className="navItem animation-delay-500" icon="bi:moon" />}
+            : <Icon className="navItem md:animation-delay-500" icon="bi:moon" />}
           </button>
         </nav>
         <Icon className="md:hidden xs:flex transition" icon="charm:menu-hamburger" onClick={() => toggle()}/> 
       </div>
-      <div className="md:border-b-[0.5px] xs:border-b-[0.5px] md:border-black xs:border-gray dark:border-white md:opacity-0 xs:opacity-100 md:animate-firl xs:animate-none animation-delay-500" />
+      <div className="md:border-b-[0.5px] xs:border-b-[0.5px] md:border-black xs:border-gray dark:border-white md:opacity-0 xs:opacity-100 md:animate-firl xs:animate-none md:animation-delay-500" />
 
       {/* Mobile navigation menu */}
       <div className={isOpen ? "md:hidden xs:flex xs:headerContent xs:headerShow" : "md:hidden xs:flex xs:headerContent"} ref={mobileMenu}>
         {/* <button className="absolute right-10" id="theme-toggle" type="button" onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')}>
           {colorTheme === "light" ?
             <Icon className="active" icon="bi:sun" /> 
-          : <Icon className="navItem animation-delay-500" icon="bi:moon" />}
+          : <Icon className="navItem md:animation-delay-500" icon="bi:moon" />}
         </button> */}
         <Link className={router.pathname == "/work" ? "headerActive" : "headerItem"} href="/work" onClick={() => toggle()}>Work</Link>
         <Link className={router.pathname == "/about" ? "headerActive" : "headerItem"} href="/about" onClick={() => toggle()}>About</Link>
-        <Link className={router.pathname == "/contact" ? "headerActive" : "headerItem animation-delay-500"} href="/contact" onClick={() => toggle()}>Contact</Link>
+        <Link className={router.pathname == "/contact" ? "headerActive" : "headerItem md:animation-delay-500"} href="/contact" onClick={() => toggle()}>Contact</Link>
         <div>
           <Socials />
         </div>
       </div>
-      <div className={isOpen ? "md:border-b-[0.5px] xs:border-b-[0.5px] md:border-black xs:border-gray dark:border-white xs:opacity-100 xs:animate-none animation-delay-500 flex" : "hidden"} />
+      <div className={isOpen ? "md:border-b-[0.5px] xs:border-b-[0.5px] md:border-black xs:border-gray dark:border-white xs:opacity-100 xs:animate-none md:animation-delay-500 flex" : "hidden"} />
     </>
   );
 }

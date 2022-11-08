@@ -34,7 +34,7 @@ const Work = ({ posts }) => {
   return (
     <>
       {/* Work Introduction */}
-      <div className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-500">
+      <div className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-500">
         <StarredPhrase firstWord="Selected" secondWord="Projects" />
       </div>
 
@@ -42,12 +42,12 @@ const Work = ({ posts }) => {
       { 
         size.width > 768 ? <div className="grid grid-cols-2 gap-14 mt-16">
         <div>
-          <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-500">
+          <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-500">
             { leftPosts }
           </div>
         </div>
         <div>
-          <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 animation-delay-500">
+          <div className="md:animate-up xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-500">
             { rightPosts }
           </div>
         </div>
