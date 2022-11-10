@@ -25,6 +25,10 @@
 
 
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
+
   body {
     @apply bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/Grain.svg')] dark:bg-[url('/DarkGrain.svg')] dark:bg-[#0D0D0D] text-black dark:text-white transition-all w-full
   }
@@ -42,7 +46,7 @@
   }
 
   p {
-    @apply font-foundersLight md:text-24 xs:text-[5vw] md:pt-10 xs:pt-4 md:pb-4 xs:pb-8 md:mt-[-5.5vh] xs:mb-[-2.5vh]
+    @apply font-foundersLight md:text-24 xs:text-[5vw] md:pt-10 xs:pt-4 md:pb-4 xs:pb-8 md:mt-[-5.5vh] xs:mb-[-1.5vh]
   }
 
   li {

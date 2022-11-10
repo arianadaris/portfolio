@@ -55,7 +55,7 @@ const Home = ({ posts }) => {
         <p className="col-span-3 xs:text-[5vw] md:text-24 md:mt-6">
           I am a creative developer and designer based in the United States. I create beautiful and engaging experiences for all users with empathy and inclusion in mind.
         </p>
-        <div className="flex self-center md:ml-auto md:mr-0 xs:mx-auto md:mt-16">
+        <div className="flex self-center md:ml-auto md:mr-0 xs:mx-auto xs:mt-4 md:mt-16">
           <OutlinedButton title="About Me" link='/about' />
         </div>
       </div>

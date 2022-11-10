@@ -7,7 +7,7 @@ import Socials from './Socials';
 const Footer = () => {
   const router = useRouter();
   return (
-    <>
+    <div className="md:mb-0 xs:mb-4">
       <div className="md:border-t-[0.5px] xs:border-t-[0.5px] md:border-black xs:border-gray opacity-0 animate-firl md:animation-delay-500 dark:border-white" />
       <div className="flex justify-between items-center md:px-14 xs:px-6 pt-8 pb-6 font-foundersLight uppercase border">
         <Link className="tracking-widest md:text-32 xs:text-68 animate-fir" href="/">Ariana Daris</Link>
@@ -19,7 +19,7 @@ const Footer = () => {
         <Socials />
       </div>
 
-    </>
+    </div>
   )
 }
 
