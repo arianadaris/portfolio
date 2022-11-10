@@ -35,7 +35,7 @@ const Card = (props) => {
     const tagElements = tags.map((tag) => createTag(tag));
 
     return (
-        <motion.div className={'card text-white flex-col xs:pb-4 md:pb-0 md:px-4 xs:px-2 md:mb-20 xs:mb-5 xs:mx-auto xs:w-auto'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
+        <motion.div className={'card text-white flex-col xs:pb-4 md:pb-0 md:px-4 xs:px-2 md:mb-20 xs:mb-5 xs:mx-auto xs:w-auto scroll-smooth'} style={{backgroundColor: `${color}`}} ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
             <div className="xs:pt-2 md:pt-6 transition hover:scale-95 hover:cursor-pointer">
                 <p className="absolute md:text-36">0{ num }.</p>
                 <Image className="mx-auto md:pt-10 mt-10 pr-4" width={350} height={350} layout="responsive" src={cover} alt={ projectTitle } />
