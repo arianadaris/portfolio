@@ -19,6 +19,8 @@ const Card = (props) => {
     useEffect(() => {
         if(size.width > 768)
             inView ? control.start('visible') : control.start('hidden');
+        else
+            control.start('visible');
     }, [control, inView])
 
     const scrollUp = {
