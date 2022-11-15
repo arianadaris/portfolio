@@ -9,6 +9,7 @@ import matter from 'gray-matter';
 import Expertise from '../components/About/Expertise';
 import Experience from '../components/About/Experience';
 import Contact from '../components/About/Contact';
+import Dawn from '../components/Dawn';
 
 import StarredPhrase from '../components/StarredPhrase';
 import Socials from '../components/Socials';
@@ -21,7 +22,7 @@ const About = ({ posts }) => {
           <StarredPhrase firstWord="About" secondWord="Me" />
         </div>
 
-        <div className="md:grid md:grid-cols-5 md:gap-4 xs:mb-[-8vh]">
+        <div className="md:grid md:grid-cols-5 md:gap-4 xs:mb-[-8vh] xs:mt-0 md:mt-6">
           <div className="col-span-3">
             <h1 className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-700">Hi, I&apos;m Ariana Daris!</h1>
             <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000 xs:mt-0 md:mt-4 xs:mb-0 md:mb-6">
@@ -31,9 +32,12 @@ const About = ({ posts }) => {
               Outside of school, I enjoy learning about front-end development and UX/UI design. I&apos;m a people person, and I love that I can use code to get to know people and create something beautiful with them! With front-end development, it&apos;s a gratifying feeling seeing how a few lines of code can make the biggest difference for someone else.
             </p>
           </div>
+          {/* My Image */}
           <div className="col-span-2">
-            <div className="w-fit mx-auto pt-2 pb-10 px-2 border-0.5 rounded-tl-full rounded-tr-full flex-col md:animate-appear xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1100 md:flex xs:hidden">
-              <Image className="mx-auto" height={350} layout="responsive" src={require('../public/images/personal/PersonalFrame.png')} alt="Ariana Daris" />
+            <div className="w-fit mx-auto pt-2 pb-10 px-2 flex-col md:animate-appear xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1100 md:flex xs:hidden">
+              <Image className="mx-auto border-[2px] border-[#3C3C3C] dark:border-white rounded-full p-1" height={350} layout="responsive" src={require('../public/images/personal/PersonalFrame.png')} alt="Ariana Daris" />
+              <Dawn className="fill-[#4F4F4F] stroke-[#4F4F4F] dark:fill-white dark:stroke-white absolute right-[30vw] h-60 z-[-1]"/>
+              <Dawn className="fill-[#4F4F4F] stroke-[#4F4F4F] dark:fill-white dark:stroke-white absolute right-[17vw] bottom-[17vw] h-60 z-[-1]"/>
               <div className="w-fit mx-auto mt-4 mb-0 p-3">
                 <Socials />
               </div>

@@ -30,7 +30,7 @@
   }
 
   h1 {
-    @apply font-ogg md:mt-12 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 
+    @apply font-ogg md:mt-7 xs:mt-6 md:text-68 xs:text-[8vw] leading-10 my-auto
   }
 
   h2 {
