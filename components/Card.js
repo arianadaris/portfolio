@@ -17,10 +17,7 @@ const Card = (props) => {
     var delay = num % 2 === 1 ? 0 : 0.5;
 
     useEffect(() => {
-        if(size.width > 768)
             inView ? control.start('visible') : control.start('hidden');
-        else
-            control.start('visible');
     }, [control, inView])
 
     const scrollUp = {
