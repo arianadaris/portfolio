@@ -25,7 +25,7 @@ const Expertise = () => {
 
     return (
         <>
-            <motion.div className="bg-blue w-105 ml-n5 my-20 px-10 pt-16 pb-20 md:grid md:grid-cols-3 xs:flex xs:flex-col dark:text-slate-900 relative z-10" ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
+            <motion.div className="bg-blue w-105 ml-n5 md:my-20 xs:my-14 px-10 md:py-16 xs:py-2 md:grid md:grid-cols-3 xs:flex xs:flex-col dark:text-slate-900 relative z-10" ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
             {/* <DevCircle className="animate-turn absolute right-neg1 top-neg2 z-0"/> */}
             <div className="col-span-1">
                 <h1 className="md:text-36 xs:text-[6vw]">My Expertise</h1>
