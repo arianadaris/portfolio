@@ -29,7 +29,7 @@ const About = ({ posts }) => {
               I am a full-stack developer and UX/UI designer based in Phoenix, Arizona. I create beautiful experiences all users can enjoy. I am passionate about meaningful user interactions and the positive impact a thoughtful design can have on a product. I specialize in ReactJS, and I am familiar with NextJS and React Native.
             </p>
             <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000">
-              I recently earned my Bachelor's degree in Computer Science with a concentration in Software Engineering. Currently, I am attending graduate school at ASU, and I anticipate earning a Master's degree in December 2023. Outside of school, I enjoy going to the gym, playing video games with friends, and spending time with family.
+              I recently earned my Bachelor&apos;s degree in Computer Science with a concentration in Software Engineering. Currently, I am attending graduate school at ASU, and I anticipate earning a Master&apos;s degree in December 2023. Outside of school, I enjoy going to the gym, playing video games with friends, and spending time with family.
             </p>
           </div>
           {/* My Image */}
