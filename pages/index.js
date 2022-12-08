@@ -29,6 +29,7 @@ const Home = ({ posts }) => {
       github={ post.github }
       external={ post.external }
       tags={ post.tags }
+      doAnimation={ size.width > 768 ? true : false }
     />;
   });
 
@@ -46,7 +47,7 @@ const Home = ({ posts }) => {
       {/* Introduction */}
       <div className="flex origin-left md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1300 xs:flex-wrap md:flex-nowrap xs:mt-0 md:mt-6">
         <h1>Full-stack Developer</h1>
-        <span className="p-1 md:mx-4 xs:mx-2 border-0.5 rounded-100">
+        <span className="p-1 md:mx-4 xs:mx-2 border-0.5 rounded-100 my-auto ">
           <Image className="personalIcon" layout="responsive" src={require('../public/images/personal/PersonalIcon.png')} alt="Ariana Daris" />
         </span>
         <h1>UX/UI Designer</h1>

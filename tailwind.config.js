@@ -22,10 +22,10 @@ module.exports = {
         black: '#000',
         gray: '#7C7D7D',
         white: '#fff',
-        green: '#D0DCC5',
-        blue: '#C5D2DC',
-        purple: '#D5CFE2',
-        pink: '#E2CFCF',
+        green: '#E2E9DB',
+        blue: '#E2E9ED',
+        purple: '#E5E1ED',
+        pink: '#E2E9ED',
         lightblue: '#F4F7F7'
       },
       screens: {

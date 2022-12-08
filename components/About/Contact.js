@@ -25,10 +25,12 @@ const Contact = () => {
 
     return (
         <>
-            <motion.div className="bg-blue w-105 ml-n5 my-20 px-10 md:pt-16 xs:pt-8 md:pb-20 xs:pb-14 dark:text-slate-900" ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
+            <motion.div className="bg-blue w-105 ml-n5 my-20 px-10 md:pt-16 xs:pt-8 md:pb-10 xs:pb-14 dark:text-slate-900" ref={ref} variants={scrollUp} initial={size.width > 768 ? "hidden" : "visible"} animate={control}>
                 <h1>Let&apos;s Get In Touch!</h1>
-                <p className="md:mb-8 xs:mb-0 md:mt-0 xs:mt-0">I am looking forward to taking on freelance opportunities, and would love to hear about your next exciting project! Feel free to send me a message and let&apos;s chat.</p>
-                <OutlinedButton title="Contact Me" link="/contact" />
+                <div className="flex md:flex-row xs:flex-col justify-between md:items-center">
+                    <p className="md:mb-8 xs:mb-0 md:mt-6 xs:mt-0 md:w-[75%]">I am looking forward to taking on freelance opportunities, and would love to hear about your next exciting project! Feel free to send me a message and let&apos;s chat.</p>
+                    <OutlinedButton title="Contact Me" link="/contact" />
+                </div>
             </motion.div>
         </>
   )

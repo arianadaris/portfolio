@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import useWindowSize from '../hooks/useWindowSize';
 
 const Card = (props) => {
-    const { color, num, projectTitle, cover, github, external, tags } = props;
+    const { color, num, projectTitle, cover, github, external, tags, doAnimation } = props;
     const control = useAnimation();
     const [ ref, inView ] = useInView();
     const size = useWindowSize();
@@ -17,6 +17,7 @@ const Card = (props) => {
     var delay = num % 2 === 1 ? 0 : 0.5;
 
     useEffect(() => {
+        if(doAnimation)
             inView ? control.start('visible') : control.start('hidden');
     }, [control, inView])
 

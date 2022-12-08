@@ -26,18 +26,16 @@ const About = ({ posts }) => {
           <div className="col-span-3">
             <h1 className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-700">Hi, I&apos;m Ariana Daris!</h1>
             <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000 xs:mt-0 md:mt-4 xs:mb-0 md:mb-6">
-              I&apos;m a senior at Arizona State University studying Computer Science with a concentration in Software Engineering. I am graduating in December of 2022 with my Bachelor&apos;s degree, and anticipate earning a Master&apos;s degree in Computer Science the following December.
+              I am a full-stack developer and UX/UI designer based in Phoenix, Arizona. I create beautiful experiences all users can enjoy. I am passionate about meaningful user interactions and the positive impact a thoughtful design can have on a product. I specialize in ReactJS, and I am familiar with NextJS and React Native.
             </p>
             <p className="md:animate-fir xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1000">
-              Outside of school, I enjoy learning about front-end development and UX/UI design. I&apos;m a people person, and I love that I can use code to get to know people and create something beautiful with them! With front-end development, it&apos;s a gratifying feeling seeing how a few lines of code can make the biggest difference for someone else.
+              I recently earned my Bachelor's degree in Computer Science with a concentration in Software Engineering. Currently, I am attending graduate school at ASU, and I anticipate earning a Master's degree in December 2023. Outside of school, I enjoy going to the gym, playing video games with friends, and spending time with family.
             </p>
           </div>
           {/* My Image */}
           <div className="col-span-2">
             <div className="w-fit mx-auto pt-2 pb-10 px-2 flex-col md:animate-appear xs:animate-none md:opacity-0 xs:opacity-100 md:animation-delay-1100 md:flex xs:hidden">
               <Image className="mx-auto border-[2px] border-[#3C3C3C] dark:border-white rounded-full p-1" height={350} layout="responsive" src={require('../public/images/personal/PersonalFrame.png')} alt="Ariana Daris" />
-              <Dawn className="fill-[#4F4F4F] stroke-[#4F4F4F] dark:fill-white dark:stroke-white absolute right-[30vw] h-60 z-[-1]"/>
-              <Dawn className="fill-[#4F4F4F] stroke-[#4F4F4F] dark:fill-white dark:stroke-white absolute right-[17vw] bottom-[17vw] h-60 z-[-1]"/>
               <div className="w-fit mx-auto mt-4 mb-0 p-3">
                 <Socials />
               </div>
