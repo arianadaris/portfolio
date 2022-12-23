@@ -37,7 +37,7 @@ const Header = () => {
         </div>
 
         {/* Dark Mode / Light Mode Btn */}
-        <button id='theme-toggle' type='button' onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')} className="xs:fixed md:static xs:bottom-20 xs:right-10">
+        <button id='theme-toggle' type='button' onClick={() => colorTheme === 'light' ? setTheme('light') : setTheme('dark')} className="xs:fixed md:static xs:bottom-10 xs:right-10">
         {colorTheme === 'light' ? 
           <Icon className="rounded-round shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 p-3 hover:text-[#3C4FC0] text-white hover:cursor-pointer dark:ring-white/20 bg-white dark:bg-zinc-800" icon="mingcute:moon-stars-line" width={48} height={48} /> 
           :
