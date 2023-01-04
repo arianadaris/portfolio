@@ -28,7 +28,7 @@ const ProjectCard = ({ title, descr, github, external, image, taglist, color }) 
             <p>{ descr }</p>
             <div className='flex items-center space-x-4 hover:underline' onClick={() => openLink()}>
                 <h3>View Project</h3>
-                <Icon icon="bi:arrow-right" />
+                <Icon icon="bi:arrow-right" className="animate-slide" />
             </div>
         </div>
     </div>

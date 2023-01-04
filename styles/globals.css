@@ -44,11 +44,11 @@
   }
 
   input {
-    @apply w-full p-4 rounded-xl bg-[#FAFAFF]
+    @apply w-full p-4 rounded-xl bg-[#FAFAFF] outline-none
   }
 
   textarea {
-    @apply p-4 rounded-xl h-[20vh] bg-[#FAFAFF]
+    @apply p-4 rounded-xl h-[20vh] bg-[#FAFAFF] outline-none
   }
 }
 
@@ -66,10 +66,18 @@
   }
 
   #submit {
-    @apply w-[50%] mr-0 ml-auto text-center bg-[#A5C3F3] hover:cursor-pointer hover:scale-105
+    @apply text-center hover:cursor-pointer hover:scale-105
   }
 }
 
 * {
   transition: 0.1s all ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.error::-webkit-input-placeholder {
+  color: red;
 }
