@@ -11,7 +11,6 @@ import Header from '../components/Header';
 import Card from '../components/ProjectCard';
 import Footer from '../components/Footer';
 
-// Add favicon
 // Fix Portfolio V4 github link
 // Add portfolio github card
 // Only 4 cards show up on home page

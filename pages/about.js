@@ -39,15 +39,19 @@ const About = () => {
             {/* Programming Languages */}
             <div className="flex space-x-4 xs:pt-2 md:pt-0">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='quill:desktop' />
-              <p className="text-black/80 dark:text-white/80">Javascript, HTML, CSS, Java, Python, C++</p>
+              <p className="text-black/80 dark:text-white/80">JavaScript, HTML/CSS, Python, C# .NET Core, C++, Java</p>
             </div>
             <div className="flex space-x-4">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='mdi:react' />
-              <p className="text-black/80 dark:text-white/80">ReactJS, React Native, NextJS, Node.js, TailwindCSS, Framer Motion</p>
+              <p className="text-black/80 dark:text-white/80">ReactJS, React Native, NextJS, Node.JS, TailwindCSS</p>
             </div>
             <div className="flex space-x-4">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='mdi:microsoft-visual-studio-code' />
               <p className="text-black/80 dark:text-white/80">Visual Studio Code, Figma, Adobe XD</p>
+            </div>
+            <div className="flex space-x-4">
+              <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='mdi:database' />
+              <p className="text-black/80 dark:text-white/80">PostgreSQL, MySQL, Firebase, MongoDB</p>
             </div>
             {/* Line Break */}
             <div className="border-b-[0.5px] w-full dark:border-white/20 border-black/20 py-2"></div>
