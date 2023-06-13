@@ -5,6 +5,8 @@ import { Icon } from '@iconify/react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+const apiToken = process.env.MY_API_KEY;
+
 const Contact = () => {
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
@@ -18,6 +20,11 @@ const Contact = () => {
   const subjectRef = useRef();
   const messageRef = useRef();
 
+  const openLink = (link) => {
+    if(typeof(window) != undefined)
+      window.open(link);
+  };
+
   // Form validation
   const [ errors, setErrors ] = useState({});
 
@@ -30,12 +37,15 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(process.env)
 
     let isValidForm = handleValidation();
     console.log(isValidForm);
 
     if(isValidForm) {
       // If the form inputs are valid
+      console.log("Hello:", apiToken);
+
       const res = await fetch('/api/sendgrid', {
         body: JSON.stringify({
           email: email,
@@ -44,7 +54,8 @@ const Contact = () => {
           message: message
         }),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorizaton': `Bearer ${apiToken}`
         },
         method: 'POST',
       });
@@ -152,9 +163,9 @@ const Contact = () => {
             <p className="dark:text-white/75 pb-10">I am currently looking for freelance opportunities and would love to be a part of your next project! Feel free to say hi!</p>
             <a className="xs:hidden md:flex hover:text-black text-black dark:text-white hover:underline" href="mailto:arianarajewski@gmail.com">arianarajewski@gmail.com</a>
             <div className="space-x-6 xs:hidden md:flex">
-              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:dribbble-fill" />
-              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:linkedin-box-fill" />
-              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:github-fill" />
+              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:dribbble-fill" onClick={() => openLink('https://dribbble.com/arianadaris')}/>
+              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:linkedin-box-fill" onClick={() => openLink('https://www.linkedin.com/in/ariana-rajewski/')}/>
+              <Icon className="hover:text-[#3C4FC0] hover:cursor-pointer text-black dark:text-white" icon="akar-icons:github-fill" onClick={() => openLink('https://github.com/arianadaris')}/>
             </div>
           </div>
           <form className="flex flex-col space-y-4 xs:w-full md:w-[50%] xs:mt-0 md:mt-0" onSubmit={handleSubmit}>
