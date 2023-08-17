@@ -39,7 +39,7 @@ const About = () => {
             {/* Programming Languages */}
             <div className="flex space-x-4 xs:pt-2 md:pt-0">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='quill:desktop' />
-              <p className="text-black/80 dark:text-white/80">JavaScript, HTML/CSS, Python, C# .NET Core, C++, Java</p>
+              <p className="text-black/80 dark:text-white/80">JavaScript, Typescript, HTML/CSS, Python, C# .NET Core</p>
             </div>
             <div className="flex space-x-4">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='mdi:react' />
@@ -57,7 +57,17 @@ const About = () => {
             <div className="border-b-[0.5px] w-full dark:border-white/20 border-black/20 py-2"></div>
             <div className="flex space-x-4 pt-2">
               <Icon className="text-black/70 dark:text-white/70 w-6 h-6" icon='ri:book-fill' />
-              <p className="text-black/80 dark:text-white/80">B.S. Computer Science, Arizona State University</p>
+              <div className="flex flex-col">
+                <p className="text-black/80 dark:text-white/80">M.S. Computer Science, Arizona State University</p>
+                <p className="text-black/50 dark:text-white/50 text-base">Anticipated December 2023</p>
+              </div>
+            </div>
+            <div className="flex space-x-4 pt-2">
+              <Icon className="text-black/70 dark:text-white/70 w-6 h-6 " icon='ri:book-fill' />
+              <div className="flex flex-col">
+                <p className="text-black/80 dark:text-white/80">B.S. Computer Science, Arizona State University</p>
+                <p className="text-black/50 dark:text-white/50 text-base">December 2022</p>
+              </div>
             </div>
           </div>
         </section>
